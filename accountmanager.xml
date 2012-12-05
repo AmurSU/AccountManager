@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<properties>
+  <category name="server">
+    <property name="bind_dn" value="cn=admin,dc=amursu,dc=ru"/>
+    <property name="group_base" value="cn=Groups,dc=amursu,dc=ru"/>
+    <property name="host" value="127.0.0.1"/>
+    <property name="port" value="389"/>
+    <property name="user_base" value="cn=Employees,dc=amursu,dc=ru"/>
+  </category>
+  <category name="group">
+    <property name="cn" value="groupName"/>
+    <property name="description" value="groupDescription"/>
+    <property name="member" value="cn=+groupName+,dc=amursu,dc=ru"/>
+    <property name="objectClass" value="groupOfNames"/>
+  </category>
+  <category name="user">
+    <property name="cn" value="lower(tr(name+.+surname))"/>
+    <property name="displayName" value="_+surname+ +gname"/>
+    <property name="givenName" value="gname"/>
+    <property name="mail" value="mail"/>
+    <property name="objectClass" value="inetOrgPerson"/>
+    <property name="ou" value="ou"/>
+    <property name="roomNumber" value="roomNumber"/>
+    <property name="sn" value="surname"/>
+    <property name="telephoneNumber" value="telephoneNumber"/>
+    <property name="title" value="title"/>
+    <property name="uid" value="lower(tr(name+.+surname))"/>
+  </category>
+  <category name="general">
+  </category>
+</properties>
